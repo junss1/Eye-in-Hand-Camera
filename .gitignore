@@ -1,0 +1,34 @@
+# ROS2
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
+
+# Database / Logs
+*.db
+*.sqlite
+logs/
+data/
+
+# ROS bag
+*.bag
+*.bag2/
+
+# Models
+*.onnx
+*.engine
+*.tflite
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
