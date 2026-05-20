@@ -16,10 +16,10 @@ setup(
     ],
     install_requires=["setuptools"],
     zip_safe=True,
-    maintainer="june",
-    maintainer_email="mhn06005@gmail.com",
-    description="TODO: Package description",
-    license="TODO: License declaration",
+    maintainer="jun",
+    maintainer_email="jsl5828@gmail.com",
+    description="Vision-based TCP follow and task automation system using ROS 2.",
+    license="MIT",
     extras_require={"test": ["pytest"]},
     entry_points={
         "console_scripts": [
