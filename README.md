@@ -254,6 +254,7 @@ git clone https://github.com/junss1/Eye-in-Hand-Camera.git
 프로젝트에서 사용하는 일부 Python 패키지는 pip 설치가 필요할 수 있습니다.
 
 ```bash
+cd ~/ros2_ws/src/Eye-in-Hand-Camera
 pip install -r requirements.txt
 ```
 
