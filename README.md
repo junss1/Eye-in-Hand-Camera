@@ -53,10 +53,9 @@ cobot2-project/
     │   ├── package.xml
     │   ├── setup.py
     │   └── setup.cfg
-    ├── cobot2_interfaces/
-    │   └── action/
-    │       └── Auth.action
-    └── doosan-robot2/
+    └── cobot2_interfaces/
+        └── action/
+            └── Auth.action
 ```
 
 ### 폴더 설명
@@ -110,7 +109,7 @@ ros2_ws/
 | `orchestrator` | `lock_done`, 인증, 경례/사격 작업 흐름 제어 |
 | `auth_action` | ROS 2 Action 기반 인증 서버 |
 | `salute` | 인증 성공 시 경례 동작 수행 |
-| `shoot` | 인증 실패 시 사격 동작 수행 |
+| `shoot` | 인증 실패 누적 시 노드 사격 동작 수행 작업  |
 | `safety_monitor` | 로봇 상태 확인 및 안전 이벤트 발행 |
 | `follow_ui_node` | PyQt5 기반 영상/이벤트 모니터링 UI |
 | `follow_logger_node` | 이벤트 및 이미지 스냅샷 로그 저장 |
@@ -126,7 +125,7 @@ ROS 2 Action 정의 패키지입니다.
 ---
 
 ## 6. 시스템 FLOW
-
+![Flow](docs/Flow_chart.png)
 1. 카메라 이미지 토픽에서 영상을 수신합니다.
 2. `yolo_camera`가 YOLO 추론을 수행합니다.
 3. 추적 기능이 켜져 있으면 Ultralytics `track()`과 `bytetrack.yaml` 설정을 사용합니다.
@@ -249,8 +248,9 @@ git clone <이 저장소 주소> cobot2-project
 
 ### 9-5. Python 의존성 설치
 
+프로젝트에서 사용하는 일부 Python 패키지는 pip 설치가 필요할 수 있습니다.
+
 ```bash
-cd ~/ros2_ws/src/cobot2-project
 pip install -r requirements.txt
 ```
 
