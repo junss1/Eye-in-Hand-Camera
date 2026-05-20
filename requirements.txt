@@ -1,0 +1,26 @@
+# requirements.txt (pip) for cobot2 package
+# NOTE: ROS2 dependencies (rclpy, std_msgs, sensor_msgs, cv_bridge, etc.) are provided via apt/rosdep, not pip.
+# Python deps used by nodes (UI / YOLO / STT / Wakeword / TTS)
+
+numpy>=1.23
+scipy>=1.9
+
+opencv-python>=4.8
+
+python-dotenv>=1.0
+
+PyQt5>=5.15
+
+ultralytics>=8.1
+
+openai>=1.0
+
+sounddevice>=0.4
+pyaudio>=0.2.14
+
+openwakeword>=0.6
+
+edge-tts>=6.1
+langchain>=0.2
+langchain-openai>=0.1
+pyserial>=3.5

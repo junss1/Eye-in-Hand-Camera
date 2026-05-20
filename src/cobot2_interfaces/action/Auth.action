@@ -1,0 +1,14 @@
+# Goal
+string challenge
+string expected
+
+---
+# Result
+bool success
+string heard_text
+string reason
+uint8 code
+
+---
+# Feedback
+uint8 mode
