@@ -24,7 +24,6 @@ data/
 # Models
 *.onnx
 *.engine
-*.tflite
 
 # VSCode
 .vscode/
