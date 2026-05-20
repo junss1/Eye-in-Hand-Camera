@@ -335,7 +335,7 @@ rosdep install -r --from-paths src --ignore-src --rosdistro humble -y
 
 ```bash
 cd ~/Eye-in-Hand-Camera
-colcon build --symlink-install --base-paths src
+colcon build --symlink-install
 
 source install/setup.bash
 ```
