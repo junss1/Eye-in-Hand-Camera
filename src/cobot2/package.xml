@@ -12,6 +12,9 @@
   <depend>std_srvs</depend>
   <depend>dsr_msgs2</depend>
   <depend>ament_index_python</depend>
+  <depend>cv_bridge</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cobot2_interfaces</depend>
 
   <buildtool_depend>ament_python</buildtool_depend>
 
