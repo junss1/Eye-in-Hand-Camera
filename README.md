@@ -42,8 +42,11 @@ Eye-in-Hand-Camera/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/
+├── data/ (실행 시 자동 생성)
 │   └── camera_data/
+├── docs/
+│   ├── Flow_chart.png
+│   └── eye_in_hand.png
 └── src/
     ├── cobot2/
     │   ├── cobot2/
@@ -109,7 +112,7 @@ ros2_ws/
 | `orchestrator` | `lock_done`, 인증, 경례/사격 작업 흐름 제어 |
 | `auth_action` | ROS 2 Action 기반 인증 서버 |
 | `salute` | 인증 성공 시 경례 동작 수행 |
-| `shoot` | 인증 실패 누적 시 사격 동작 수행 작업  |
+| `shoot` | 인증 실패 누적 시 사격 동작 수행 |
 | `safety_monitor` | 로봇 상태 확인 및 안전 이벤트 발행 |
 | `follow_ui_node` | PyQt5 기반 영상/이벤트 모니터링 UI |
 | `follow_logger_node` | 이벤트 및 이미지 스냅샷 로그 저장 |
@@ -243,7 +246,7 @@ git clone -b humble https://github.com/DoosanRobotics/doosan-robot2.git
 
 ```bash
 cd ~/ros2_ws/src
-git clone https://github.com/junss1/Eye-in-Hand-Camera.git cobot2-project
+git clone https://github.com/junss1/Eye-in-Hand-Camera.git
 ```
 
 ### 9-5. Python 의존성 설치
@@ -277,7 +280,7 @@ cd ~/ros2_ws
 rosdep install -r --from-paths src --ignore-src --rosdistro humble -y
 
 colcon build --symlink-install \
-  --base-paths src/cobot2-project/src src/doosan-robot2
+  --base-paths src/Eye-in-Hand-Camera/src src/doosan-robot2
 
 source install/setup.bash
 ```
