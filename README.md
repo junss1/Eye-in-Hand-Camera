@@ -338,7 +338,44 @@ src/cobot2/resource/weights/
 
 ---
 
-## 12. Hardware Configuration
+
+## 12. Arduino External Actuator
+
+외부 액추에이터 제어를 위해 Arduino 기반 SG90 서보모터 제어 코드를 사용합니다.
+
+### 저장 위치 예시
+
+```text
+arduino/
+└── sg90_controller/
+    └── sg90_controller.ino
+```
+
+### Hardware
+
+| Item | Value |
+|---|---|
+| Board | Arduino Uno / Nano |
+| Servo | SG90 |
+| Signal Pin | D9 |
+| Baudrate | 115200 |
+
+### Serial Command
+
+| Command | Description |
+|---|---|
+| `1` | 서보모터 왕복 동작 실행 |
+
+### 동작 개요
+
+```text
+ROS 2 Node
+→ Serial Communication
+→ Arduino
+→ SG90 Servo Actuation
+```
+
+## 13. Hardware Configuration
 
 실제 사용 환경에 따라 달라질 수 있으나, 코드 기준 주요 전제는 다음과 같습니다.
 
@@ -355,13 +392,13 @@ src/cobot2/resource/weights/
 
 ---
 
-## 13. License
+## 14. License
 
 이 프로젝트는 MIT License를 사용합니다. 자세한 내용은 `LICENSE` 파일을 참고하십시오.
 
 ---
 
-## 14. 주의사항
+## 15. 주의사항
 
 - `doosan-robot2`는 외부 의존성으로 관리하는 것을 권장합니다.
 - 실제 로봇 실행 전 로봇 IP, TCP/Tool 설정, 안전 정지 조건을 현장 환경에 맞게 확인해야 합니다.
