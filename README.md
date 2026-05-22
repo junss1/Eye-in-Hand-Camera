@@ -1,4 +1,4 @@
-# 경계 시스템 자동화
+# 경계 자동화 시스템
 
 [![Demo Video](docs/eye_in_hand.png)](https://youtu.be/Xig3LvbgLYU)
 ↑ 이미지 클릭 시 데모 영상을 확인할 수 있습니다.
